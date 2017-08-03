@@ -1,0 +1,92 @@
+<carousel  [interval]="myInterval" [noWrap]="noWrapSlides">
+ <slide *ngFor="let slidez of slides;">
+  <img [src]="slidez.url" class="img-responsive">
+  <div class="carousel-caption">
+    <h3>{{slidez.title}}</h3>
+    <p>{{slidez.desc}}</p>
+  </div>
+ </slide>
+</carousel>
+<div class="media">
+  <div class="media-left">
+    <a href="https://baike.baidu.com/item/二十八星宿/675?fr=aladdin" target="_blank">
+      <img class="media-object" src="../../assets/images/dong.jpg" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">东方七宿</h4>
+    <p>〔角、亢、氐、房、心、尾、箕〕
+      东方七宿包括角，亢，氐，房，心，尾，箕。是古代中国神话和天文学结合的产物。
+      古人觉得恒星相互间的位置恒久不变，可以利用它们做标志来说明日、月、五星运行所到的位置。
+      经过长期观测，古代中国天文学家先后选择了黄道赤道附近的二十八个星宿作为坐标。因为它们环列在日、月、五星的四方，
+      很像日、月、五星栖宿的场所，所以称作二十八宿。又将其按方位及季节和四象，分为东、南、西、北四宫，每宫七宿，
+      分别将各宫所属七宿连缀想象为一种动物，以为是“天之四灵，以正四方”。
+    </p>
+  </div>
+</div>
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading pull-right">北方七宿</h4>
+    <br>
+    <p>〔斗、牛、女、虚、危、室、壁〕
+      北方七宿共六十五个星座，八百余颗星，它们组成了蛇与龟的形象，故称为玄武。
+      七宿斗宿为北方玄武元龟之首，由六颗星组成，状亦如斗，一般称其为南斗，它与北斗一起掌管着生死大权，又称为天庙。
+      牛宿六星，状如牛角。女宿四星，形状亦象箕。
+      虚宿主星即尧典四星之一的虚星，又名天节，颇有不祥之意，
+      远古虚星主秋，含有肃杀之象，万物枯落，实可悲泣也。
+      危宿内有坟墓星座、虚粱星座、盖屋星座，亦不祥，反映了古人在深秋临冬之季节的内心不安。室宿又名玄宫、清庙、玄冥（水神），它的出现告诉人们要加固屋室，
+      以过严冬。壁宿与室宿相类，可能含有加固院墙之意。北方玄武星宿地位甚高，北京旧有真武庙（复兴门外），即供奉真武大帝。
+    </p>
+  </div>
+  <div class="media-right">
+    <a href="https://baike.baidu.com/item/二十八星宿/675?fr=aladdin" target="_blank">
+      <img class="media-object" src="../../assets/images/bei.jpg" alt="...">
+    </a>
+  </div>
+</div>
+<div class="media">
+  <div class="media-left">
+    <a href="https://baike.baidu.com/item/二十八星宿/675?fr=aladdin" target="_blank">
+      <img class="media-object" src="../../assets/images/xi.jpg" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">西方七宿</h4>
+    <p>
+      〔奎、娄、胃、昴、毕、觜、参〕
+      西方七宿共有五十四个星座，七百余颗星，它们组成了白虎图案。
+      奎宿由十六颗不太亮的星组成，状如鞋底，它算是白虎之神的嘴巴。
+      娄宿三星，附近有左更、右更、天仓、天大将军等星座。
+      胃宿三星紧靠在一起，附近有天廪、天船、积尸、积水等星座，
+      看来胃口太小难以消化如此多的食物，有点消化不良。
+      昴宿即著名的昴星团，有关它的神话传说特别多，昴宿内有卷舌、
+      天谗之星，似乎是祸从口出的意思。毕宿八星，状如叉爪，
+      古代将网小而柄长者称为毕，毕星又号称雨师（箕星为风伯），
+      又名屏翳、号屏、玄冥（与室宿相同）；我国以毕宿为雨星。觜宿三星几乎完全靠在一起，实在是樱桃小口一点点。
+      参宿七星，中间三星排成一排，两侧各有两颗星，七颗星均很亮，在天空中非常显眼，它与大火星正好相对，
+      我们今天称意见不同为意见参商，以及兄弟不和为参商不相见，皆源于此。
+    </p>
+  </div>
+</div>
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading pull-right">南方七宿</h4>
+    <br>
+    <p>〔井、鬼、柳、星、张、翼、轸〕南方七宿共计有四十二个星座，
+      五百多颗星，它的形象是一只展翅飞翔的朱雀。
+      井宿八星如井，西方称为双子，附近有北河、南河（即小犬星座）、积水、水府等星座。鬼宿四星，据说一管积聚马匹、一管积聚兵士、
+      一管积聚布帛、一管积聚金玉，附近还有天狗、天社、外厨等星座。
+      柳宿八星，状如垂柳，它是朱雀的口。星宿七星，是朱雀的颈，附近是轩辕十七星。
+      张宿六星为朱雀的嗉子，附近有天庙十四星。翼宿二十二星，算是朱雀的翅膀和尾巴。
+      轸宿四星又名天车，四星居中，旁有左辖、右辖两星，“车之象也”。
+    </p>
+  </div>
+  <div class="media-right">
+    <a href="https://baike.baidu.com/item/二十八星宿/675?fr=aladdin" target="_blank">
+      <img class="media-object" src="../../assets/images/nan.jpg" alt="...">
+    </a>
+  </div>
+</div>
+
+
+<app-tabs></app-tabs>

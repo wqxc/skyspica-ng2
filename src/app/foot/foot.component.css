@@ -1,0 +1,11 @@
+.footer{
+  height: 200px;
+  width: 100%;
+  background: #ddd;
+
+}
+.footer div{
+  height: 120px;
+  width: 100%;
+
+}

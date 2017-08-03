@@ -1,0 +1,7 @@
+<tabset>
+  <tab *ngFor="let tabz of tabs"
+       [heading]="tabz.title"
+       [customClass]="tabz.customClass">
+       <p ngClass="{{tabz.textColor}}">{{tabz?.content}}</p>
+  </tab>
+</tabset>
