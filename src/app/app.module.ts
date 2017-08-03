@@ -14,7 +14,10 @@ import {CustomRequestOptions} from './customrequest.options';
 import { HttpModule ,Http,RequestOptions} from '@angular/http';
 import { TabsComponent } from './main-first/tabs/tabs.component';
 import {HashLocationStrategy , LocationStrategy} from '@angular/common';
-// import { ActivatedRoute, Router, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from '@angular/router';
+import { AccordionModule } from 'ng2-bootstrap';
+import { MediaComponent } from './main-first/media/media.component';
+import { CarouselComponent } from './main-first/carousel/carousel.component';
+import { AccordionComponent } from './main-second/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -22,15 +25,18 @@ import {HashLocationStrategy , LocationStrategy} from '@angular/common';
     FootComponent,
     MainSecondComponent,
     MainFirstComponent,
-    TabsComponent
+    TabsComponent,
+    MediaComponent,
+    CarouselComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     CarouselModule.forRoot(),
     TabsModule.forRoot(),
-    HttpModule,
-    // Router
+    AccordionModule.forRoot(),
+    HttpModule
   ],
   providers: [SlidDataService,
     { provide: RequestOptions, useClass: CustomRequestOptions },

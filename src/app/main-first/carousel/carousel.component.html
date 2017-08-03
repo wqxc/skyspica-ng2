@@ -1,0 +1,9 @@
+<carousel  [interval]="myInterval" [noWrap]="noWrapSlides">
+ <slide *ngFor="let slidez of slides;">
+  <img [src]="slidez.url" class="img-responsive">
+  <div class="carousel-caption">
+    <h3>{{slidez.title}}</h3>
+    <p>{{slidez.desc}}</p>
+  </div>
+ </slide>
+</carousel>

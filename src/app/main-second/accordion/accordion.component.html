@@ -1,0 +1,65 @@
+<!-- <div class="second">
+  <div class="row">
+    <div class="col-md-4 col-sm-6" style="text-align:left">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="rounded image">
+    </div>
+    <div class="col-md-4 col-sm-6" style="text-align:center">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="circle image">
+    </div>
+    <div class="col-md-4 col-sm-6" style="text-align:right">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="thumbnail image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6" style="text-align:center">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="rounded image">
+    </div>
+    <div class="col-md-6 col-sm-6" style="text-align:center">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="circle image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" style="text-align:center">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="circle image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" style="text-align:center">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="circle image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6" style="text-align:center">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="rounded image">
+    </div>
+    <div class="col-md-6 col-sm-6" style="text-align:center">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="circle image">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-6" style="text-align:left">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="rounded image">
+    </div>
+    <div class="col-md-4 col-sm-6" style="text-align:center">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="circle image">
+    </div>
+    <div class="col-md-4 col-sm-6" style="text-align:right">
+      <img src="../../assets/images/yang.jpg" class="img-thumbnail" alt="thumbnail image">
+    </div>
+  </div>
+</div> -->
+<accordion>
+  <accordion-group #group>
+    <div accordion-heading>
+      白羊座
+      <i class="pull-right float-xs-right glyphicon"
+         [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+    </div>
+    <img src="../../assets/images/baiyang.jpg" alt="">
+    <span>白羊座（Aries），黄道十二星座之第一宫，位于双鱼座之东，金牛座之西</span>
+  </accordion-group>
+  <accordion-group heading="随便什么">
+    <img src="../../assets/images/baiyang.jpg" alt="">
+    <span>这是随便什么的内容，不带箭头的一个样式</span>
+  </accordion-group>
+</accordion>
