@@ -27,10 +27,13 @@ export class MainFirstComponent implements OnInit {
                 this.slides=res;
                 console.log("res",res);
             });
-  //   this.slides=[{url:'../../assets/images/x1.jpg',title:"First slide label",desc:'Nulla vitae elit libero, a pharetra augue mollis interdum.'}
-  //               ,{url:'../../assets/images/x2.jpg',title:"Second slide label",desc:'This is home for you,for me,for all of us'}
-  //               ,{url:'../../assets/images/x3.jpg',title:"Third slide label",desc:'Beautiful and kuxuan '}
-  //               ]
+            if(!this.slides){
+                this.slides=[{url:'../../assets/images/x1.jpg',title:"First slide label",desc:'Nulla vitae elit libero, a pharetra augue mollis interdum.'}
+                            ,{url:'../../assets/images/x2.jpg',title:"Second slide label",desc:'This is home for you,for me,for all of us'}
+                            ,{url:'../../assets/images/x3.jpg',title:"Third slide label",desc:'Beautiful and kuxuan '}
+                            ]
+
+            }
 
   }
 
