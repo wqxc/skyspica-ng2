@@ -13,6 +13,9 @@ import {CustomRequestOptions} from './customrequest.options';
 
 import { HttpModule ,Http,RequestOptions} from '@angular/http';
 import { TabsComponent } from './main-first/tabs/tabs.component';
+import {HashLocationStrategy , LocationStrategy} from '@angular/common';
+// import { ActivatedRoute, Router, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,10 +29,12 @@ import { TabsComponent } from './main-first/tabs/tabs.component';
     RouterModule.forRoot(appRoutes),
     CarouselModule.forRoot(),
     TabsModule.forRoot(),
-    HttpModule
+    HttpModule,
+    // Router
   ],
   providers: [SlidDataService,
-    { provide: RequestOptions, useClass: CustomRequestOptions }
+    { provide: RequestOptions, useClass: CustomRequestOptions },
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
     ],
   bootstrap: [AppComponent]
 })

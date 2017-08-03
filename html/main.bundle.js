@@ -88,6 +88,7 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__customrequest_options__ = __webpack_require__("../../../../../src/app/customrequest.options.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main_first_tabs_tabs_component__ = __webpack_require__("../../../../../src/app/main-first/tabs/tabs.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -108,6 +109,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+// import { ActivatedRoute, Router, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from '@angular/router';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -127,10 +130,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_routes__["a" /* appRoutes */]),
             __WEBPACK_IMPORTED_MODULE_3_ng2_bootstrap__["a" /* CarouselModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_3_ng2_bootstrap__["b" /* TabsModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_11__angular_http__["a" /* HttpModule */]
+            __WEBPACK_IMPORTED_MODULE_11__angular_http__["a" /* HttpModule */],
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_9__main_first_slid_data_service__["a" /* SlidDataService */],
-            { provide: __WEBPACK_IMPORTED_MODULE_11__angular_http__["b" /* RequestOptions */], useClass: __WEBPACK_IMPORTED_MODULE_10__customrequest_options__["a" /* CustomRequestOptions */] }
+            { provide: __WEBPACK_IMPORTED_MODULE_11__angular_http__["b" /* RequestOptions */], useClass: __WEBPACK_IMPORTED_MODULE_10__customrequest_options__["a" /* CustomRequestOptions */] },
+            { provide: __WEBPACK_IMPORTED_MODULE_13__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_13__angular_common__["b" /* HashLocationStrategy */] }
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
     })
@@ -324,10 +328,12 @@ var MainFirstComponent = (function () {
             _this.slides = res;
             console.log("res", res);
         });
-        //   this.slides=[{url:'../../assets/images/x1.jpg',title:"First slide label",desc:'Nulla vitae elit libero, a pharetra augue mollis interdum.'}
-        //               ,{url:'../../assets/images/x2.jpg',title:"Second slide label",desc:'This is home for you,for me,for all of us'}
-        //               ,{url:'../../assets/images/x3.jpg',title:"Third slide label",desc:'Beautiful and kuxuan '}
-        //               ]
+        if (!this.slides) {
+            this.slides = [{ url: '../../assets/images/x1.jpg', title: "First slide label", desc: 'Nulla vitae elit libero, a pharetra augue mollis interdum.' },
+                { url: '../../assets/images/x2.jpg', title: "Second slide label", desc: 'This is home for you,for me,for all of us' },
+                { url: '../../assets/images/x3.jpg', title: "Third slide label", desc: 'Beautiful and kuxuan ' }
+            ];
+        }
     };
     return MainFirstComponent;
 }());
@@ -390,7 +396,7 @@ var SlidDataService = (function () {
     return SlidDataService;
 }());
 SlidDataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Injectable */])(),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === "function" && _a || Object])
 ], SlidDataService);
 
