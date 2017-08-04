@@ -18,6 +18,7 @@ import { AccordionModule } from 'ng2-bootstrap';
 import { MediaComponent } from './main-first/media/media.component';
 import { CarouselComponent } from './main-first/carousel/carousel.component';
 import { AccordionComponent } from './main-second/accordion/accordion.component';
+import { CustomComponent } from './main-second/custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AccordionComponent } from './main-second/accordion/accordion.component'
     TabsComponent,
     MediaComponent,
     CarouselComponent,
-    AccordionComponent
+    AccordionComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
