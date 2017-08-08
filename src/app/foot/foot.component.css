@@ -4,8 +4,7 @@
   background: #ddd;
 
 }
-.footer div{
-  height: 120px;
-  width: 100%;
-
+.footer p{
+  text-align: center;
+  line-height: 200px;
 }
