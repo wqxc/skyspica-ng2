@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\">\n        <span>SkySpica</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-first\">\n        <span>二十八星宿</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-second\">\n        <span>黄道十二宫</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-second\">\n        <span>一些接口的测试</span>\n      </a>\n    </div>\n  </div>\n</nav>\n<!-- 主体区域 -->\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n\n<app-foot></app-foot>\n"
+module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\">\n        <span>SkySpica</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-first\">\n        <span>二十八星宿</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-second\">\n        <span>黄道十二宫</span>\n      </a>\n      <!-- <a class=\"navbar-brand\" routerLink=\"main-second\">\n        <span>一些接口的测试</span>\n      </a> -->\n    </div>\n  </div>\n</nav>\n<!-- 主体区域 -->\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n\n<app-foot></app-foot>\n"
 
 /***/ }),
 
