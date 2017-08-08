@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\">\n        <span>SkySpica</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-first\">\n        <span>二十八星宿</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-second\">\n        <span>黄道十二宫</span>\n      </a>\n    </div>\n  </div>\n</nav>\n<!-- 主体区域 -->\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n\n<app-foot></app-foot>\n"
+module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\">\n        <span>SkySpica</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-first\">\n        <span>二十八星宿</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-second\">\n        <span>黄道十二宫</span>\n      </a>\n      <a class=\"navbar-brand\" routerLink=\"main-second\">\n        <span>一些接口的测试</span>\n      </a>\n    </div>\n  </div>\n</nav>\n<!-- 主体区域 -->\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n\n<app-foot></app-foot>\n"
 
 /***/ }),
 
@@ -228,7 +228,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".footer{\n  height: 200px;\n  width: 100%;\n  background: #ddd;\n\n}\n.footer p{\n  text-align: center;\n  line-height: 200px;\n}\n/*.footer div{\n  height: 120px;\n  width: 100%;\n\n}*/\n", ""]);
+exports.push([module.i, ".footer{\n  height: 200px;\n  width: 100%;\n  background: #ddd;\n\n}\n.footer p{\n  text-align: center;\n  line-height: 200px;\n}\n", ""]);
 
 // exports
 
@@ -241,7 +241,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/foot/foot.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"footer\">\n  <div></div>\n  <p class=\"container\">Copyright © 2017-2018 SkySpica.cn 备案号:<a href=\"http://www.miitbeian.gov.cn/\">豫ICP备17031074号</a></p>\n</div>\n"
+module.exports = "<div class=\"footer\">\n  <div></div>\n  <p class=\"container\">Copyright © 2017-2018 SkySpica.cn 备案号:<a href=\"http://www.miitbeian.gov.cn/\" target=\"_blank\">豫ICP备17031074号</a></p>\n</div>\n"
 
 /***/ }),
 
@@ -302,7 +302,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/main-first/carousel/carousel.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<carousel  [interval]=\"myInterval\" [noWrap]=\"noWrapSlides\">\n <slide *ngFor=\"let slidez of slides;\">\n  <img [src]=\"slidez.url\" class=\"img-responsive\">\n  <div class=\"carousel-caption\">\n    <h3>{{slidez.title}}</h3>\n    <p>{{slidez.desc}}</p>\n  </div>\n </slide>\n</carousel>\n"
+module.exports = "<carousel  [interval]=\"myInterval\" [noWrap]=\"noWrapSlides\">\n <slide *ngFor=\"let slidez of slides;\">\n  <img [src]=\"slidez.url\" class=\"img-responsive\">\n  <div class=\"carousel-caption\">\n    <h3>{{slidez.titles}}</h3>\n    <p>{{slidez.description}}</p>\n  </div>\n </slide>\n</carousel>\n"
 
 /***/ }),
 
@@ -337,16 +337,16 @@ var CarouselComponent = (function () {
     CarouselComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.slidDataService.getSlideData().subscribe(function (res) {
-            res.length = 3;
             _this.slides = res;
             console.log("res", res);
         });
-        if (!this.slides) {
-            this.slides = [{ url: '../../assets/images/x1.jpg', title: "First slide label", desc: 'Nulla vitae elit libero, a pharetra augue mollis interdum.' },
-                { url: '../../assets/images/x2.jpg', title: "Second slide label", desc: 'This is home for you,for me,for all of us' },
-                { url: '../../assets/images/x3.jpg', title: "Third slide label", desc: 'Beautiful and kuxuan ' }
-            ];
-        }
+        // if(!this.slides){
+        //     this.slides=[{url:'../../assets/images/x1.jpg',title:"First slide label",desc:'Nulla vitae elit libero, a pharetra augue mollis interdum.'}
+        //                 ,{url:'../../assets/images/x2.jpg',title:"Second slide label",desc:'This is home for you,for me,for all of us'}
+        //                 ,{url:'../../assets/images/x3.jpg',title:"Third slide label",desc:'Beautiful and kuxuan '}
+        //                 ]
+        //
+        // }
     };
     return CarouselComponent;
 }());
